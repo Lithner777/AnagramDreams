@@ -1,5 +1,4 @@
 ﻿using AnagramDreams.Api.Dtos;
-using AnagramDreams.DataAccess.Model;
 using AnagramDreams.DataAccess.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -25,11 +24,18 @@ namespace AnagramDreams.Api.Controllers
         }
 
         [HttpGet("{word}")]
-        public async Task<IEnumerable<WordResp>> GetAnagrams(string word)
+        public async Task<IActionResult> GetAnagrams(string word)
         {
-            var result = await wordService.GetAnagrams(word);
-            return result
-                .Select(w => mapper.Map<WordResp>(w));
+            try
+            {
+                var result = await wordService.GetAnagrams(word);
+                var response = result.Select(w => mapper.Map<WordResp>(w));
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost("isAnagram")]

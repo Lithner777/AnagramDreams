@@ -38,7 +38,7 @@ namespace AnagramDreams.DataAccess.Tests.Services
                     await cut.GetAnagrams("BLABLA");
                 });
 
-                exception.Message.ShouldBe("The word BLABLA is not in the dictionary.");
+                exception.Message.ShouldBe("The word BLABLA has no anagrams in the dictionary.");
             }
         }
 

@@ -28,7 +28,7 @@ namespace AnagramDreams.DataAccess.Services
             }
             else
             {
-                throw new Exception($"The word {word} is not in the dictionary.");
+                throw new Exception($"The word {word} has no anagrams in the dictionary.");
             }
         }
 
