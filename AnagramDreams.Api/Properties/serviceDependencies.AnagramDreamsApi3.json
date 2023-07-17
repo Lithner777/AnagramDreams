@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/anagramdreamsapidbserver/databases/AnagramDreams.Api_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:AnagramDreamsDbConnectionString",
+      "dynamicId": null
+    },
+    "identityapp1": {
+      "secretStore": "AzureAppSettings",
+      "type": "identityapp.secretStore",
+      "connectionId": "AzureAD:ClientSecret",
+      "dynamicId": null
+    }
+  }
+}

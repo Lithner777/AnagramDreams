@@ -1,11 +1,17 @@
 {
   "dependencies": {
-    "identityapp1": {
-      "type": "identityapp",
-      "dynamicId": null
-    },
     "apis1": {
       "type": "apis"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:AnagramDreamsDbConnectionString",
+      "dynamicId": null
+    },
+    "identityapp1": {
+      "type": "identityapp",
+      "connectionId": "AzureAD:ClientSecret",
+      "dynamicId": null
     }
   }
 }
