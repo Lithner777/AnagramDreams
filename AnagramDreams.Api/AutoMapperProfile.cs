@@ -1,5 +1,8 @@
-﻿using AnagramDreams.Api.Dtos;
+using AnagramDreams.Api.Dtos;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.Identity.Web;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace AnagramDreams.Api
 {
