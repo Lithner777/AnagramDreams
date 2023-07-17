@@ -80,20 +80,20 @@ namespace AnagramDreams.Api
             var connectionString = string.Empty;
             var configurationBuilder = new ConfigurationBuilder();
 
-            //if (Environment.IsDevelopment())
-            //{
-            //    logger.Information("Environment is {Environment}, using Azure Db.", Environment.EnvironmentName);
-            //    configurationBuilder.AddAzureKeyVault(
-            //        new Uri("https://bookapikeyvault.vault.azure.net/"),
-            //        new DefaultAzureCredential()); // key vault setup
+            if (!Environment.IsDevelopment())
+            {
+                logger.Information("Environment is {Environment}, using Azure Db.", Environment.EnvironmentName);
+                configurationBuilder.AddAzureKeyVault(
+                    new Uri("https://anagramdreamskeyvault.vault.azure.net/"),
+                    new DefaultAzureCredential()); // key vault setup
 
-            //    var configuration = configurationBuilder.Build();
-            //    connectionString = configuration.GetChildren().First(c => c.Key == "AnagramDreamsDbConnectionString").Value;
-            //}
-            //else
-            //{
+                var configuration = configurationBuilder.Build();
+                connectionString = configuration.GetChildren().First(c => c.Key == "AnagramDreamsDbConnectionString").Value;
+            }
+            else
+            {
                 connectionString = Configuration.GetConnectionString("AnagramDreamsDbConnectionString"); // appsetting for local env
-            //}
+            }
 
             services.AddDbContext<AnagramDreamsDbContext>(options =>
             options.UseSqlServer(connectionString));
