@@ -10,7 +10,7 @@ namespace AnagramDreams.Api.Controllers
     // A controller is responsible for handling the API endpoints
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class WordsController : ControllerBase
     {
         private readonly IWordService wordService;

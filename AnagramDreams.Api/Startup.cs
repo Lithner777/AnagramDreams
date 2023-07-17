@@ -33,12 +33,12 @@ namespace AnagramDreams.Api
         {
             logger.Information("AnagramDreams.Api starting...");
 
-            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //    .AddJwtBearer(options =>
-            //    {
-            //        options.Authority = Configuration.GetSection("AzureAd")["Authority"];
-            //        options.Audience = Configuration.GetSection("AzureAd")["ClientId"];
-            //    });
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.Authority = Configuration.GetSection("AzureAd")["Authority"];
+                    options.Audience = Configuration.GetSection("AzureAd")["ClientId"];
+                });
 
             SetupDb(services);
 
@@ -66,7 +66,7 @@ namespace AnagramDreams.Api
 
             app.UseRouting();
 
-           // app.UseAuthentication();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
