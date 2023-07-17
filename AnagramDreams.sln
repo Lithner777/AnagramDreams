@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramDreams", "AnagramDreams\AnagramDreams.csproj", "{EB51B9A0-E450-496E-B25F-4A38827DA4A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnagramDreams.Api", "AnagramDreams.Api\AnagramDreams.Api.csproj", "{929E4551-1CCF-4F52-A1DE-28315D30AE8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnagramDreams.DataAccess", "DataAccess\AnagramDreams.DataAccess.csproj", "{2DC54412-214A-4679-A103-6D43DC35E8DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnagramDreams.DataAccess.Tests", "AnagramDreams.DataAccess.Tests\AnagramDreams.DataAccess.Tests.csproj", "{E96F35FD-089E-4133-8E31-9C35C18F4A8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramDreams.TestUtils", "AnagramDreams.TestUtils\AnagramDreams.TestUtils.csproj", "{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EB51B9A0-E450-496E-B25F-4A38827DA4A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB51B9A0-E450-496E-B25F-4A38827DA4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB51B9A0-E450-496E-B25F-4A38827DA4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB51B9A0-E450-496E-B25F-4A38827DA4A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929E4551-1CCF-4F52-A1DE-28315D30AE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929E4551-1CCF-4F52-A1DE-28315D30AE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929E4551-1CCF-4F52-A1DE-28315D30AE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929E4551-1CCF-4F52-A1DE-28315D30AE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC54412-214A-4679-A103-6D43DC35E8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC54412-214A-4679-A103-6D43DC35E8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC54412-214A-4679-A103-6D43DC35E8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC54412-214A-4679-A103-6D43DC35E8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96F35FD-089E-4133-8E31-9C35C18F4A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96F35FD-089E-4133-8E31-9C35C18F4A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96F35FD-089E-4133-8E31-9C35C18F4A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96F35FD-089E-4133-8E31-9C35C18F4A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
