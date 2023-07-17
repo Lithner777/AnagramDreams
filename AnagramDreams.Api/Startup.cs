@@ -80,7 +80,7 @@ namespace AnagramDreams.Api
             var connectionString = string.Empty;
             var configurationBuilder = new ConfigurationBuilder();
 
-            if (Environment.IsDevelopment())
+            if (!Environment.IsDevelopment())
             {
                 logger.Information("Environment is {Environment}, using Azure Db.", Environment.EnvironmentName);
                 configurationBuilder.AddAzureKeyVault(
