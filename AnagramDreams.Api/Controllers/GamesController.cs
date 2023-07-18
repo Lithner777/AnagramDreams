@@ -3,7 +3,7 @@ using AnagramDreams.DataAccess.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.Graph;
 
 namespace AnagramDreams.Api.Controllers
 {
@@ -35,6 +35,13 @@ namespace AnagramDreams.Api.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpGet("Ping")]
+        public IActionResult Ping()
+        {
+            var message = "Ping!";
+            return Ok(new { Message = message });
         }
     }
 }
