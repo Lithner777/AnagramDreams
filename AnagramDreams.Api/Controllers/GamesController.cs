@@ -9,7 +9,7 @@ namespace AnagramDreams.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class GamesController : ControllerBase
     {
         private readonly IGameService gameService;
