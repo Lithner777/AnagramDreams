@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnagramDreams.DataAccess", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnagramDreams.DataAccess.Tests", "AnagramDreams.DataAccess.Tests\AnagramDreams.DataAccess.Tests.csproj", "{E96F35FD-089E-4133-8E31-9C35C18F4A8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramDreams.TestUtils", "AnagramDreams.TestUtils\AnagramDreams.TestUtils.csproj", "{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnagramDreams.TestUtils", "AnagramDreams.TestUtils\AnagramDreams.TestUtils.csproj", "{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramDreams.Api.Tests", "AnagramDreams.Api.Tests\AnagramDreams.Api.Tests.csproj", "{03F0556D-65E8-400D-9A14-2FB11B24FA8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6AA20B9-9EB1-4F3C-947F-FDA36532C465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F0556D-65E8-400D-9A14-2FB11B24FA8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F0556D-65E8-400D-9A14-2FB11B24FA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F0556D-65E8-400D-9A14-2FB11B24FA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F0556D-65E8-400D-9A14-2FB11B24FA8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

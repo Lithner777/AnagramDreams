@@ -24,7 +24,7 @@ namespace AnagramDreams.Api.Controllers
         }
 
         [HttpGet("{word}")]
-        public async Task<IActionResult> GetAnagrams(string word)
+        public async Task<ActionResult<WordResp>> GetAnagrams(string word)
         {
             try
             {

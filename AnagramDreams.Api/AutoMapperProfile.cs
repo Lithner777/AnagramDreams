@@ -1,8 +1,4 @@
-using AnagramDreams.Api.Dtos;
 using AutoMapper;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.Identity.Web;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace AnagramDreams.Api
 {
@@ -11,6 +7,8 @@ namespace AnagramDreams.Api
         public AutoMapperProfile()
         {
             CreateMap<DataAccess.Model.Word, Dtos.WordResp>();
+            CreateMap<DataAccess.Model.Game, Dtos.GameResp>();
+            CreateMap<DataAccess.Model.GameWord, Dtos.GameWordResp>();
         }
     }
 }
