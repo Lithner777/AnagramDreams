@@ -50,24 +50,24 @@ namespace AnagramDreams.DataAccess.Services
         {
             var random = new Random();
 
+            if (anagramCount == 0)
+            {
+                var randomIndex = random.Next(dbContext.Words.Count());
+                var word = dbContext.Words.Skip(randomIndex).Take(1).SingleOrDefault();
+                return word!;
+            }
+
             var words = await dbContext.Words
                 .GroupBy(w => w.Alfagram)
                 .ToListAsync();
-
-            if (anagramCount == 0)
-            {
-                var list = words.SelectMany(g => g).ToList();
-                var randomIndex1 = random.Next(0, list.Count());
-                return list[randomIndex1];
-            }
 
             var filteredWords = words
                 .Where(g => g.Count() == anagramCount+1)
                 .SelectMany(g => g)
                 .ToList();
 
-            var randomIndex = random.Next(0, filteredWords.Count());
-            return filteredWords[randomIndex];
+            var randomIndex2 = random.Next(0, filteredWords.Count());
+            return filteredWords[randomIndex2];
         }
     }
 }
