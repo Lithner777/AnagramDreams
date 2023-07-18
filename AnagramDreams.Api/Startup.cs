@@ -2,16 +2,10 @@
 using AnagramDreams.DataAccess.Services;
 using Azure.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Serilog;
-using System;
-using System.Linq;
+
 
 namespace AnagramDreams.Api
 {
@@ -44,6 +38,7 @@ namespace AnagramDreams.Api
 
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IWordService, WordService>(); // Basic DI
+            services.AddScoped<IGameService, GameService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

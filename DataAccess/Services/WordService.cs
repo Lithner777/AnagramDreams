@@ -46,11 +46,28 @@ namespace AnagramDreams.DataAccess.Services
             }
         }
 
-        public async Task<Word> GetRandomWord()
+        public async Task<Word> GetRandomWord(int anagramCount)
         {
             var random = new Random();
-            var randomIndex = random.Next(0, await dbContext.Words.CountAsync());
-            return await dbContext.Words.OrderBy(w => EF.Functions.Random()).Skip(randomIndex).FirstAsync();
+
+            var words = await dbContext.Words
+                .GroupBy(w => w.Alfagram)
+                .ToListAsync();
+
+            if (anagramCount == 0)
+            {
+                var list = words.SelectMany(g => g).ToList();
+                var randomIndex1 = random.Next(0, list.Count());
+                return list[randomIndex1];
+            }
+
+            var filteredWords = words
+                .Where(g => g.Count() == anagramCount+1)
+                .SelectMany(g => g)
+                .ToList();
+
+            var randomIndex = random.Next(0, filteredWords.Count());
+            return filteredWords[randomIndex];
         }
     }
 }

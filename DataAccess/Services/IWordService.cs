@@ -7,5 +7,7 @@ namespace AnagramDreams.DataAccess.Services
         Task<List<Word>> GetAnagrams(string word);
 
         Task<bool> IsAnagram(string input, string word);
+
+        Task<Word> GetRandomWord(int anagramCount);
     }
 }
