@@ -1,2 +1,2 @@
 # AnagramDreams
-An anagram guessing game, unbfinished work
+An anagram guessing game, unfinished work
